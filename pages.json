@@ -1,0 +1,28 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/views/home",
+			"style": {
+				"navigationBarTitleText": "uni-app",            // 导航栏头部的内容
+				 "enablePullDownRefresh": true    
+			}
+		}
+	    ,{
+            "path" : "pages/views/about",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false              //是否开启下拉刷新
+            }
+        }
+    ],
+	"globalStyle": {                                      // 全局的页面样式
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}
+
+//subPackages用于将多个页面进行分组，可以将页面按照不同的目录结构进行划分，实现更高效的代码组织和资源加载
