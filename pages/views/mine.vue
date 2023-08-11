@@ -1,6 +1,6 @@
 <template>
 	<view>
-		商城
+		我的
 	</view>
 </template>
 

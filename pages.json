@@ -1,9 +1,10 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	 //必填 
+	"pages": [ //pages数组中第一项表示应用启动页  
 		{
 			"path": "pages/views/home",
 			"style": {
-				"navigationBarTitleText": "uni-app",            // 导航栏头部的内容
+				"navigationBarTitleText": "首页",             // 导航栏头部的内容
 				 "enablePullDownRefresh": true    
 			}
 		}
@@ -11,18 +12,50 @@
             "path" : "pages/views/about",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "商城",
+                "enablePullDownRefresh": false              //是否开启下拉刷新
+            }
+        } ,{
+            "path" : "pages/views/mine",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的",
                 "enablePullDownRefresh": false              //是否开启下拉刷新
             }
         }
     ],
-	"globalStyle": {                                      // 全局的页面样式
+    // 全局的页面样式    pages.json 页面路由   https://uniapp.dcloud.net.cn/collocation/pages.html#globalstyle
+	// 页面中配置项会覆盖 globalStyle 中相同的配置项
+	"globalStyle": {                                 
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "uni-app",     
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+	//原生页面底部的tabbar   
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",  
+		"list": [{
+			"pagePath": "pages/views/home",
+			"iconPath": "pages/assets/icon/shouye-.png",
+			"selectedIconPath": "pages/assets/icon/shouye2.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/views/about",
+			"iconPath": "pages/assets/icon/shangdian.png",
+			"selectedIconPath": "pages/assets/icon/shangdian_1.png",
+			"text": "商城"
+		}, {
+			"pagePath": "pages/views/mine",
+			"iconPath": "pages/assets/icon/wode.png",
+			"selectedIconPath": "pages/assets/icon/wode_1.png",
+			"text": "我的"
+		}]
+	}
 }
 
 //subPackages用于将多个页面进行分组，可以将页面按照不同的目录结构进行划分，实现更高效的代码组织和资源加载
